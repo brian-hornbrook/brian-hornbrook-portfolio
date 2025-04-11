@@ -2,211 +2,41 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brian Hornbrook Portfolio</title>
-    <link rel="stylesheet" href="{{ URL::asset('css/styles.css') }}">
-
-    <!-- font -->
-    <link href="https://fonts.googleapis.com/css2?family=Lekton&display=swap" rel="stylesheet">
-
-    <!-- semantic ui -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub Repo Gallery</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Oswald:wght@500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{{ URL::asset('css/repos/normalize.css') }}" />
+    <link rel="stylesheet" href="{{ URL::asset('css/repos/styles.css') }}" />
+    <script src="{{ URL::asset('js/repos/script.js') }}" defer></script>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#about">About</a></li>
-                <li id="contact-me"><a href="#contact">Contact Me</a></li>
-            </ul>
-        </nav>
-        <div id="header-info">
-            <h1>Hi there, I'm Brian Hornbrook</h1>
-            <h2>I'm a Full Stack and DevOps Engineer who polishes all code</h2>
+    <main class="container">
+        <div class="badge">
+            <div class="circle"></div>
         </div>
-    </header>
+        <section class="intro">
+            <h1><i class="fab fa-github-alt"></i> GitHub Repo Gallery</h1>
+            <!-- profile -->
+            <div class="overview"></div>
+        </section>
 
-    <main>
-        <div id="projects">
-            <h2>Projects</h2>
-            <div id="projecs-info">
-
-                <div id="projects-container">
-                    <div class="area">
-                        <div class="image-area">
-                            <a href="/repos" target="_blank">
-                                <img src="{{ URL::asset('images/github-repo.png') }}" alt="project image">
-                            </a>
-                        </div>
-                        <h4>GitHub Repo Gallery</h4>
-                        <div class="project-description-area">
-                            <p>Listing for all my GitHub repos.</p>
-                        </div>
-                        <div class="tools">
-                            <p><strong>Skills:</strong> Manipulate the DOM, Version control</p>
-                            <p><strong>Tools:</strong> GitHub, API, UI</p>
-                        </div>
-                        <div class="live-page-button">
-                            <a href="repos" target="_blank">
-                                <button>Live Page</button>
-                            </a>
-                            <div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="area">
-                        <div class="image-area">
-                            <a href="https://marianascleaningservicellc.com" target="_blank">
-                                <img src="{{ URL::asset('images/marianas-logo.png') }}" alt="project image">
-                            </a>
-                        </div>
-                        <h4>Marianas Cleaning Service LLS</h4>
-                        <div class="project-description-area">
-                            <p>Listing all cleaning services.</p>
-                        </div>
-                        <div class="tools">
-                            <p><strong>Skills:</strong> Databases, Accounts, Contact Form</p>
-                            <p><strong>Tools:</strong> Django, Superuser, Authentication, Responsive Site</p>
-                        </div>
-                        <div class="live-page-button">
-                            <a href="https://marianascleaningservicellc.com" target="_blank">
-                                <button>Live Page</button>
-                            </a>
-                            <div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="area">
-                        <div class="image-area">
-                            <a href="https://sthwom.org" target="_blank">
-                                <img src="{{ URL::asset('images/brand.png') }}" alt="project image">
-                            </a>
-                        </div>
-                        <h4>Seed Time and Harvest</h4>
-                        <div class="project-description-area">
-                            <p>Demonstration of ministry focus.</p>
-                        </div>
-                        <div class="tools">
-                            <p><strong>Skills:</strong> Responsive Site, Contact Form</p>
-                            <p><strong>Tools:</strong> Symfony, Recapta</p>
-                        </div>
-                        <div class="live-page-button">
-                            <a href="https://sthwom.org" target="_blank">
-                                <button>Live Page</button>
-                            </a>
-                            <div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div id="skills">
-                    <h2>Skills</h2>
-                    <h3>Developer Skills</h3>
-                    <div id="my-skills">
-                        <div class="skill-area">
-                            <p>Flexbox</p>
-                        </div>
-                        <div class="skill-area">
-                            <p>Bootstrap</p>
-                        </div>
-                        <div class="skill-area">
-                            <p>JavaScript / DOM</p>
-                        </div>
-                        <div class="skill-area">
-                            <p>React</p>
-                        </div>
-                        <div class="skill-area">
-                            <p>Git GitHub</p>
-                        </div>
-
-
-                    </div>
-                    <h3>Tools</h3>
-                    <div id="my-tools">
-                        <div class="tool-area">
-                            <p>Version Control (GitHub)</p>
-                        </div>
-                        <div class="tool-area">
-                            <p>Responsive Typography</p>
-                        </div>
-                        <div class="tool-area">
-                            <p>APIs</p>
-                        </div>
-                        <div class="tool-area">
-                            <p>ES6</p>
-                        </div>
-                        <div class="tool-area">
-                            <p>JSX</p>
-                        </div>
-                        <div class="tool-area">
-                            <p>FTP Client</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="about">
-                    <div id="image-area">
-                        <img src="{{ URL::asset('images/resume_pic.jpg') }}" alt="resume">
-                    </div>
-                    <h2>My name is Brian Hornbrook and I am looking for a Web Developer job.</h2>
-                    <h3>One day I tried out programming and built a simple pong game using a web
-                        program that was very similar to Python. I immediately fell in love with
-                        building using logic.</h3>
-                    <p>
-                        When I go on vacation I like to plan out where we are going and where to
-                        stay. For example, we can stay in the nicest hotel for the price instead
-                        of staying at the first hotel we find.
-                    </p>
-                    <p id="message">
-                        <strong>Can't wait to work with you!</strong>
-                    </p>
-
-
-                </div>
-                <footer id="contact">
-                    <h2>Let's Connect</h2>
-                    <div id="footer-info-area">
-                        <div class="footer-info">
-                            <h3>Hire Me</h3>
-                            <p>817-842-7123</p>
-                            <a href="mailto:brian_hornbrook@outlook.com">
-                                <p>brian_hornbrook@outlook.com</p>
-                            </a>
-                        </div>
-                        <div class="footer-info">
-                            <h3>Follow Me</h3>
-                            <div>
-                                <a href="https://www.linkedin.com/in/brian-hornbrook-8a0b0047/" target="_BLANK">
-                                    <i id="linkedIn" class="linkedin icon"></i>
-                                </a>
-                                <a href="https://www.facebook.com/brainybdh" target="_blank">
-                                    <i class="facebook icon"></i>
-                                </a>
-                                <a href="https://github.com/brian-hornbrook" target="_blank">
-                                    <i class="github icon"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="footer-info">
-                            <h3>Meet me</h3>
-                            <p>Fort Worth, TX</p>
-                            <p>Let's go to meetups together!</p>
-                        </div>
-                    </div>
-
-                    <p>Copyright 2022<span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>Brian Hornbrook</p>
-
-                </footer>
+        <!-- repos -->
+        <div class="repos">
+            <input type="text" class="filter-repos hide" placeholder="Search by name" />
+            <ul class="repo-list"></ul>
+        </div>
+        <div class="repo-data hide"></div>
+        <div class="button-container">
+            <button class="view-repos hide">Back to Repo Gallery</button>
+        </div>
     </main>
-    <script src="{% static '/js/script.js' %}"></script>
 </body>
 
 </html>
