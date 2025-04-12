@@ -26,7 +26,7 @@
         </nav>
         <div id="header-info">
             <h1>Hi there, I'm Brian Hornbrook</h1>
-            <h2>I'm a Full Stack and DevOps Engineer who polishes all code</h2>
+            <h2>I'm a DevOps and Full Stack Engineer who polishes all code</h2>
         </div>
     </header>
 
@@ -54,8 +54,6 @@
                             <a href="repos" target="_blank">
                                 <button>Live Page</button>
                             </a>
-                            <div>
-                            </div>
                         </div>
                     </div>
 
@@ -109,54 +107,97 @@
 
                 <div id="skills">
                     <h2>Skills</h2>
-                    <h3>Developer Skills</h3>
-                    <div id="my-skills">
-                        <div class="skill-area">
-                            <p>Flexbox</p>
-                        </div>
-                        <div class="skill-area">
-                            <p>Bootstrap</p>
-                        </div>
-                        <div class="skill-area">
-                            <p>JavaScript / DOM</p>
-                        </div>
-                        <div class="skill-area">
-                            <p>React</p>
-                        </div>
-                        <div class="skill-area">
-                            <p>Git GitHub</p>
-                        </div>
 
-
+                    <div class="skill-section">
+                        <h3>Developer Skills</h3>
+                        <div id="my-skills">
+                            <div class="item">
+                                <p>CI / CD</p>
+                            </div>
+                            <div class="item">
+                                <p>Automation</p>
+                            </div>
+                            <div class="item">
+                                <p>Containerization</p>
+                            </div>
+                            <div class="item">
+                                <p>Version Control</p>
+                            </div>
+                            <div class="item">
+                                <p>APIs</p>
+                            </div>
+                            <div class="item">
+                                <p>Responsive Typography</p>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Tools</h3>
-                    <div id="my-tools">
-                        <div class="tool-area">
-                            <p>Version Control (GitHub)</p>
+                    <div class="skill-section">
+                        <h3>Tools</h3>
+                        <div id="my-tools">
+                            <div class="item">
+                                <p>Linux</p>
+                            </div>
+                            <div class="item">
+                                <p>Debian</p>
+                            </div>
+                            <div class="item">
+                                <p>GitHub</p>
+                            </div>
+                            <div class="item">
+                                <p>AWS</p>
+                            </div>
                         </div>
-                        <div class="tool-area">
-                            <p>Responsive Typography</p>
+                    </div>
+                    <div class="skill-section">
+                        <h3>Frameworks</h3>
+                        <div id="my-frameworks">
+                            <div class="item">
+                                <p>Chef</p>
+                            </div>
+                            <div class="item">
+                                <p>Symfony</p>
+                            </div>
+                            <div class="item">
+                                <p>Laravel</p>
+                            </div>
+                            <div class="item">
+                                <p>Django</p>
+                            </div>
+                            <div class="item">
+                                <p>React</p>
+                            </div>
+                            <div class="item">
+                                <p>Vue</p>
+                            </div>
                         </div>
-                        <div class="tool-area">
-                            <p>APIs</p>
-                        </div>
-                        <div class="tool-area">
-                            <p>ES6</p>
-                        </div>
-                        <div class="tool-area">
-                            <p>JSX</p>
-                        </div>
-                        <div class="tool-area">
-                            <p>FTP Client</p>
+                    </div>
+                    <div class="skill-section">
+                        <h3>Languages</h3>
+                        <div id="my-languages">
+                            <div class="item">
+                                <p>Bash</p>
+                            </div>
+                            <div class="item">
+                                <p>Python</p>
+                            </div>
+                            <div class="item">
+                                <p>Ruby</p>
+                            </div>
+                            <div class="item">
+                                <p>PHP</p>
+                            </div>
+                            <div class="item">
+                                <p>JavaScript</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-
+                
                 <div id="about">
                     <div id="image-area">
                         <img src="{{ URL::asset('images/resume_pic.jpg') }}" alt="resume">
                     </div>
-                    <h2>My name is Brian Hornbrook and I am looking for a Web Developer job.</h2>
+                    <h2>My name is Brian Hornbrook and I'm passionate about what programming can do!</h2>
                     <h3>One day I tried out programming and built a simple pong game using a web
                         program that was very similar to Python. I immediately fell in love with
                         building using logic.</h3>
@@ -166,47 +207,45 @@
                         of staying at the first hotel we find.
                     </p>
                     <p id="message">
-                        <strong>Can't wait to work with you!</strong>
+                        <strong>Can't wait to see what we build together!</strong>
                     </p>
 
 
                 </div>
-                <footer id="contact">
-                    <h2>Let's Connect</h2>
-                    <div id="footer-info-area">
-                        <div class="footer-info">
-                            <h3>Hire Me</h3>
-                            <p>817-842-7123</p>
-                            <a href="mailto:brian_hornbrook@outlook.com">
-                                <p>brian_hornbrook@outlook.com</p>
-                            </a>
-                        </div>
-                        <div class="footer-info">
-                            <h3>Follow Me</h3>
-                            <div>
-                                <a href="https://www.linkedin.com/in/brian-hornbrook-8a0b0047/" target="_BLANK">
-                                    <i id="linkedIn" class="linkedin icon"></i>
-                                </a>
-                                <a href="https://www.facebook.com/brainybdh" target="_blank">
-                                    <i class="facebook icon"></i>
-                                </a>
-                                <a href="https://github.com/brian-hornbrook" target="_blank">
-                                    <i class="github icon"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="footer-info">
-                            <h3>Meet me</h3>
-                            <p>Fort Worth, TX</p>
-                            <p>Let's go to meetups together!</p>
-                        </div>
+            </div>
+        </div>
+        <footer id="contact">
+            <h2>Let's Connect</h2>
+            <div id="footer-info-area">
+                <div class="footer-info">
+                    <h3>Hire Me</h3>
+                    <a id="call" href="tel:8172534571"><p>817-253-4571</p></a>
+                    <p id="phone">817-253-4571</p>
+                    <a href="mailto:brian_hornbrook@outlook.com">
+                        <p>brian_hornbrook@outlook.com</p>
+                    </a>
+                </div>
+                <div class="footer-info">
+                    <h3>Follow Me</h3>
+                    <div id="follow-me">
+                        <a href="https://www.linkedin.com/in/brian-hornbrook-8a0b0047/" target="_BLANK">
+                            <i id="linkedIn" class="linkedin icon"></i>
+                        </a>
+                        <a href="https://www.facebook.com/brainybdh" target="_blank">
+                            <i class="facebook icon"></i>
+                        </a>
+                        <a href="https://github.com/brian-hornbrook" target="_blank">
+                            <i class="github icon"></i>
+                        </a>
                     </div>
+                </div>
+            </div>
 
-                    <p>Copyright 2022<span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>Brian Hornbrook</p>
+            <p>Copyright 2022<span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>Brian Hornbrook</p>
 
-                </footer>
+        </footer>
     </main>
-    <script src="{% static '/js/script.js' %}"></script>
+    <!-- <script src="{{ URL::asset('js/script.js') }}"></script> -->
 </body>
 
 </html>

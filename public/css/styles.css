@@ -108,11 +108,21 @@ h2 {
     width: 100%;
 }
 
-#my-skills,
-#my-tools {
-    margin: 0 0 40px 0;
+.skill-section {
     display: flex;
     flex-flow: column;
+    align-items: center;
+    width: 100%;
+}
+
+#my-skills,
+#my-tools,
+#my-frameworks,
+#my-languages {
+    margin: 0 0 40px 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
     align-items: center;
     width: 100%;
 }
@@ -122,9 +132,9 @@ h2 {
     margin-top: 40px;
 }
 
-#skills .skill-area,
-#skills .tool-area {
-    width: 100%;
+#skills .item {
+    width: 50%;
+    padding-inline: 5px;
 }
 
 #skills p {
@@ -134,18 +144,20 @@ h2 {
     flex-flow: column;
     align-items: center;
     color: black;
-    margin: 20px 0;
+    margin: 10px 0;
     padding: 13px 0;
+    border-radius: 5px;
 }
 
 
 
 /***** ABOUT *****/
 #about {
-    margin: 80px 30px 70px 30px;
+    margin: 80px 0 70px 0;
     display: flex;
     flex-flow: column;
     align-items: center;
+    max-width: 830px;
 }
 
 #about h2,
@@ -159,7 +171,7 @@ h2 {
 }
 
 #about img {
-    width: 100%;
+    border-radius: 100px;
 }
 
 #about h2 {
@@ -172,6 +184,7 @@ h2 {
 
 #about #message {
     font-size: 1.2rem;
+    margin-top: 20px;
 }
 
 
@@ -263,6 +276,35 @@ footer i.icon {
     font-size: 1.8em;
 }
 
+footer #follow-me {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    #phone {
+        display: none;
+    }
+}
+
+
+/***** DESKTOP *****/
+@media (min-width: 500px) {
+
+    footer {
+        #call {
+            display: none;
+        }
+
+        #phone {
+            display: block;
+        }
+
+    }
+}
+
 
 
 /***** TABLET *****/
@@ -305,16 +347,22 @@ footer i.icon {
 
 
     /***** SKILLS *****/
-    #skills #my-skills,
-    #skills #my-tools {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
+    #skills {
+
+        #my-skills,
+        #my-tools,
+        #my-frameworks,
+        #my-languages {
+
+            .item {
+                width: 33%;
+            }
+        }
     }
 
     #skills .skill-area,
     #skills .tool-area {
-        width: 50%;
+        /* width: 50%; */
         padding: 0 20px;
     }
 
@@ -350,11 +398,13 @@ footer i.icon {
     footer #footer-info-area {
         display: flex;
         flex-flow: row nowrap;
+        justify-content: center;
         box-sizing: border-box;
     }
 
     footer .footer-info {
-        width: 50%;
+        padding-inline: 30px;
+        margin-top: 0;
     }
 
 }
@@ -376,6 +426,10 @@ footer i.icon {
 
     #projects img {
         height: 200px;
+    }
+
+    .skill-section {
+        width: 1165px;
     }
 
 
