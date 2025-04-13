@@ -228,10 +228,10 @@
                 <div class="footer-info">
                     <h3>Follow Me</h3>
                     <div id="follow-me">
-                        <a href="https://www.linkedin.com/in/brian-hornbrook-8a0b0047/" target="_BLANK">
+                        <a href="https://www.linkedin.com/in/brian-hornbrook" target="_BLANK">
                             <i id="linkedIn" class="linkedin icon"></i>
                         </a>
-                        <a href="https://www.facebook.com/brainybdh" target="_blank">
+                        <a href="https://www.facebook.com/brianbdh" target="_blank">
                             <i class="facebook icon"></i>
                         </a>
                         <a href="https://github.com/brian-hornbrook" target="_blank">
@@ -245,7 +245,6 @@
 
         </footer>
     </main>
-    <!-- <script src="{{ URL::asset('js/script.js') }}"></script> -->
 </body>
 
 </html>
