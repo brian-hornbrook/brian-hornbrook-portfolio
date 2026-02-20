@@ -1,0 +1,6 @@
+# Dockerfile not needed inside image
+Dockerfile
+
+# Local Python virtual environments
+venv
+.venv
