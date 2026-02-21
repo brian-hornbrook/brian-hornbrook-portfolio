@@ -1,7 +1,7 @@
 services:
   web:
-    build: ./$APP_NAME
-    container_name: $APP_NAME
+    build: ./brian_hornbrook_portfolio
+    container_name: brian_hornbrook_portfolio
     restart: unless-stopped
     env_file:
       - .env
@@ -12,15 +12,15 @@ services:
       - "traefik.enable=true"
       # Routers
       # http
-      - "traefik.http.routers.$APP_NAME.rule=Host(`yourhonestprogrammer.com`) || Host(`www.yourhonestprogrammer.com`)"
-      - "traefik.http.routers.$APP_NAME.entrypoints=web"
-      - "traefik.http.routers.$APP_NAME.middlewares=redirect"
+      - "traefik.http.routers.brian_hornbrook_portfolio.rule=Host(`yourhonestprogrammer.com`) || Host(`www.yourhonestprogrammer.com`)"
+      - "traefik.http.routers.brian_hornbrook_portfolio.entrypoints=web"
+      - "traefik.http.routers.brian_hornbrook_portfolio.middlewares=redirect"
       # https
-      - "traefik.http.routers.$APP_NAME-secure.rule=Host(`yourhonestprogrammer.com`) || Host(`www.yourhonestprogrammer.com`)"
-      - "traefik.http.routers.$APP_NAME-secure.entrypoints=websecure"
-      - "traefik.http.routers.$APP_NAME-secure.tls.certresolver=myresolver"
+      - "traefik.http.routers.brian_hornbrook_portfolio-secure.rule=Host(`yourhonestprogrammer.com`) || Host(`www.yourhonestprogrammer.com`)"
+      - "traefik.http.routers.brian_hornbrook_portfolio-secure.entrypoints=websecure"
+      - "traefik.http.routers.brian_hornbrook_portfolio-secure.tls.certresolver=myresolver"
       # Services
-      - "traefik.http.services.$APP_NAME-secure.loadbalancer.server.port=$APP_NAME"
+      - "traefik.http.services.brian_hornbrook_portfolio-secure.loadbalancer.server.port=brian_hornbrook_portfolio"
       # Redirect Scheme HTTP -> HTTPS
       - "traefik.http.middlewares.redirect.redirectscheme.scheme=https"
       - "traefik.http.middlewares.redirect.redirectscheme.permanent=true"
