@@ -24,3 +24,6 @@ services:
       # Redirect Scheme HTTP -> HTTPS
       - "traefik.http.middlewares.redirect.redirectscheme.scheme=https"
       - "traefik.http.middlewares.redirect.redirectscheme.permanent=true"
+networks:
+  web:
+    external: true
