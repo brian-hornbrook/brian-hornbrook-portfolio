@@ -18,6 +18,3 @@ COPY . .
 
 ## Expose port 5001 so it can be mapped externally
 #EXPOSE 8000
-
-#CMD ["python", "manage.py", "runserver", "0.0.0.0:$PORT"]
-CMD ["/app/entrypoint.sh"]

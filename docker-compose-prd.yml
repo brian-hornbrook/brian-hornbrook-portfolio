@@ -1,23 +1,7 @@
 services:
   web:
-    container_name: $APP_NAME
-    # restart: unless-stopped
-    volumes:
-      - ./$APP_NAME:/app
     build: ./$APP_NAME
-    ports:
-      - '8000:8000'
-    command: >
-      sh -c "
-        python manage.py migrate
-        python -m gunicorn --bind 0.0.0.0:PORT --workers 3 mysite.wsgi:application
-      "
-    develop:
-      watch:
-        - action: sync
-          path: ./$APP_NAME
-          target: /app
-          ignore:
-            - Dockerfile
+    container_name: $APP_NAME
+    restart: unless-stopped
     env_file:
       - .env
