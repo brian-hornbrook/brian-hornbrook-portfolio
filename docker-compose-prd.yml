@@ -8,3 +8,19 @@ services:
     entrypoint:
       - /bin/sh
       - entrypoint.prd.sh
+    labels:
+      - "traefik.enable=true"
+      # Routers
+      # http
+      - "traefik.http.routers.$APP_NAME.rule=Host(`yourhonestprogrammer.com`) || Host(`www.yourhonestprogrammer.com`)"
+      - "traefik.http.routers.$APP_NAME.entrypoints=web"
+      - "traefik.http.routers.$APP_NAME.middlewares=redirect"
+      # https
+      - "traefik.http.routers.$APP_NAME-secure.rule=Host(`yourhonestprogrammer.com`) || Host(`www.yourhonestprogrammer.com`)"
+      - "traefik.http.routers.$APP_NAME-secure.entrypoints=websecure"
+      - "traefik.http.routers.$APP_NAME-secure.tls.certresolver=myresolver"
+      # Services
+      - "traefik.http.services.$APP_NAME-secure.loadbalancer.server.port=$APP_NAME"
+      # Redirect Scheme HTTP -> HTTPS
+      - "traefik.http.middlewares.redirect.redirectscheme.scheme=https"
+      - "traefik.http.middlewares.redirect.redirectscheme.permanent=true"
