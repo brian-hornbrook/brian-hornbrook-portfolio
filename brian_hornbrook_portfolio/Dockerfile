@@ -15,6 +15,3 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the rest of the application code into the container
 COPY . .
-
-## Expose port 5001 so it can be mapped externally
-#EXPOSE 8000
