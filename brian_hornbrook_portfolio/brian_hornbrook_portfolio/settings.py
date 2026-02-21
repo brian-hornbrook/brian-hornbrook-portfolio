@@ -50,6 +50,9 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'brian_hornbrook_portfolio.urls'
 
+# Allow SSL Header with HTTPS
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
