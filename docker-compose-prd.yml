@@ -10,7 +10,7 @@ services:
       - entrypoint.prd.sh
     labels:
       - "traefik.enable=true"
-      # Routers
+        # Routers
       # http
       - "traefik.http.routers.brian_hornbrook_portfolio.rule=Host(`yourhonestprogrammer.com`) || Host(`www.yourhonestprogrammer.com`)"
       - "traefik.http.routers.brian_hornbrook_portfolio.entrypoints=web"
@@ -20,7 +20,7 @@ services:
       - "traefik.http.routers.brian_hornbrook_portfolio-secure.entrypoints=websecure"
       - "traefik.http.routers.brian_hornbrook_portfolio-secure.tls.certresolver=myresolver"
       # Services
-      - "traefik.http.services.brian_hornbrook_portfolio-secure.loadbalancer.server.port=brian_hornbrook_portfolio"
+      - "traefik.http.services.brian_hornbrook_portfolio-secure.loadbalancer.server.port=8000"
       # Redirect Scheme HTTP -> HTTPS
       - "traefik.http.middlewares.redirect.redirectscheme.scheme=https"
       - "traefik.http.middlewares.redirect.redirectscheme.permanent=true"
