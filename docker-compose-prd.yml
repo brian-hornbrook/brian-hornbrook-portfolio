@@ -39,7 +39,7 @@ services:
     image: willfarrell/autoheal
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-    restart: always
+    restart: unless-stopped
 
 networks:
   web:
